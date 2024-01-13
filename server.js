@@ -1,15 +1,16 @@
 import express from "express"
-import dir from "path"
 
-
+import { fileURLToPath } from "url";
+import {dirname} from "path";
 
 const app=express();
 const port =3000;
+const __dirname = dirname(fileURLToPath(import.meta.url))
 
 app.get("/",(req,res) => {
-    res.sendFile('',)})
+    res.sendFile(__dirname+ '/main/index.html',)})
     
-
+ 
 
 app.get("/about",(req,res) => {
     res.send("express is onn")})

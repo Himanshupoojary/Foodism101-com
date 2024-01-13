@@ -7,6 +7,9 @@ const app=express();
 const port =3000;
 const __dirname = dirname(fileURLToPath(import.meta.url))
 
+
+
+app.use(express.static(__dirname +'/main/css'))
 app.get("/",(req,res) => {
     res.sendFile(__dirname+ '/main/index.html',)})
     

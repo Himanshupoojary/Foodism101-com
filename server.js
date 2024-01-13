@@ -13,10 +13,10 @@ app.get("/",(req,res) => {
  
 
 app.get("/about",(req,res) => {
-    res.send("express is onn")})
+    res.sendFile(__dirname + '/main/about.html')})
     
 app.get("/contact",(req,res) => {
-    res.send("express is onn")})
+    res.send( __dirname + "/main/contact.html")})
     
 
 app.get("/addrecipe",(req,res) => {

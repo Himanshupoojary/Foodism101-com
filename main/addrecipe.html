@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ADD RECIPES</title>
+    <link rel="stylesheet" href="css/addrecipe.css">
+    <link rel="icon" type="img/jpg" href="pic/icon69.jpg">
+</head>
+<body>
+     <!-- Navbar  -->
+  <div class="nav-bar">
+    <div class="nav-center">
+      <div class="nav-logo">
+        <form action="index.html" method="get" class="nav-logo1">
+          <button class="nav-logo-btn">  
+            <img src="pic/icon69.jpg" alt="Logo" class="nav-logoimg" >   
+            <div class="nav-header"> Foodism.com</div></button>
+         
+        </form></div>
+      <div class="nav-links">
+        <form action="index.html" method="get"  ><button class="nav-link" style="background: transparent;" href="index.html" >HOME</button></form>
+        <form action="about.html" method="get"><button class="nav-link" style="background: transparent;">ABOUT</button></form>
+        <form action="addrecipe.html" method="get"><button class="nav-link nav-button adjust" style="background: transparent;" href="">ADD RECIPE</button></form>
+        <form action="recipe.html" method="get"><button class="nav-link nav-button adjust recipe-btn" style="background: transparent;">RECIPES</button></form>
+        <div class="nav-lin contact-link">
+            <form action="contact.html" method="get"><button class="nav-link-cntbtn">CONTACT</button></form>
+      </div>
+    </div>
+  </div>
+  </div>
+  <!-- main content -->
+  <main class="page">
+    <section class="tags-wrapper">
+      <form method="post" action="/uploaddata" enctype="multipart/form-data">
+        <div class="mb-3">
+          <label for="exampleInputEmail1" class="form-label">Recipe Name</label><br>
+          <input type="text" class="form-control" id="exampleInputEmail1" name="recipename">
+        </div>
+        <div class="mb-3">
+          <label for="exampleInputPassword1" class="form-label">Recipe Description</label><br>
+          <textarea type="text" class="form-control" id="exampleInputPassword1" name="recipe_desc"></textarea>
+        </div>
+        <div class="mb-3 ">
+          <label for="exampleInputEmail1" class="form-label">Recipe Continent</label><br>
+          <select name="continent">
+            <option value="africa">Africa</option>
+            <option value="southAmerica">South America</option>
+            <option value="northAmerica">North America</option>
+            <option value="southAsia">South Asia</option>
+            <option value="northAsia">North Asia</option>
+            <option value="middleEast">Middle East</option>
+            <option value="europe">Europe</option>
+            <option value="oceania">Oceania</option>
+          </select>
+        </div>
+        <div class="mb-3">
+          <label for="exampleInputPassword1" class="form-label">Cook Time</label><br>
+          <input type="text" class="form-control" id="exampleInputPassword1" name="cooktime">
+        </div>
+        <div class="mb-3">
+          <label for="exampleInputPassword1" class="form-label">Prep Time</label><br>
+          <input type="text" class="form-control" id="exampleInputPassword1" name="preptime">
+        </div>
+        <div class="mb-3">
+          <label for="exampleInputPassword1" class="form-label">Servings</label><br>
+          <input type="text" class="form-control" id="exampleInputPassword1" name=servings>
+        </div>
+        <div class="mb-3">
+          <label for="exampleInputPassword1" class="form-label">Recipe Ingredients</label><br>
+          <textarea type="text" class="form-control" id="exampleInputPassword1" name="recipe_in"></textarea>
+          <label for="exampleInputPassword1" class="form-label">Enter each recipe Ingredients with 2 comma's</label>
+        </div>
+        <div class="mb-3">
+          <label for="exampleInputPassword1" class="form-label">Recipe Steps</label><br>
+          <textarea type="text" class="form-control" id="exampleInputPassword1" name="recipe_steps"></textarea>
+          <label for="exampleInputPassword1" class="form-label">Enter each recipe step with 2 comma's</label>
+        </div>
+        <div class="mb-3">
+          <label for="exampleInputPassword1" class="form-label">Nutrition values</label><br>
+          Calories:<input type="text" class="form-control" id="exampleInputPassword1" name="calories"><br>
+          Protein:<input type="text" class="form-control" id="exampleInputPassword1" name="protein"><br>
+          Fat:<input type="text" class="form-control" id="exampleInputPassword1" name="fat"><br>
+          Carbs:<input type="text" class="form-control" id="exampleInputPassword1" name="carbs"><br>
+        </div>
+        <div class="mb-3">
+          <label for="exampleInputPassword1" class="form-label">Upload Pic</label><br>
+          <input type="file" name="image">
+        </div>
+        <button class="btn btn-primary">Submit</button>
+      </form>
+    </section>
+    <section>
+      <img class="cookpic" src="../assets/recipes/uploadpic.jpg" alt="">
+    </section>
+  </main>
+    
+</body>
+<footer >
+    <div class="footer101"> © 2023 <a class="footer-header" href="index.html"> Foodism.com</a>  Built by Himanshu Poojary
+  
+  </div>
+  </footer>
+</html>

@@ -1,15 +1,16 @@
-import express from "express"
+import express from "express" //importing the module
 
-import { fileURLToPath } from "url";
-import {dirname} from "path";
+import { fileURLToPath } from "url";   //to get the absolute path in the deployed computer
+import {dirname} from "path";   //to get the directory path 
 
 const app=express();
 const port =3000;
-const __dirname = dirname(fileURLToPath(import.meta.url))
+const __dirname = dirname(fileURLToPath(import.meta.url))   //to get path 
+
+app.use(express.static(__dirname +'/main/css'))  //to resolve static files
 
 
 
-app.use(express.static(__dirname +'/main/css'))
 app.get("/",(req,res) => {
     res.sendFile(__dirname+ '/main/index.html',)})
     

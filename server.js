@@ -5,22 +5,22 @@ import {dirname} from "path";   //to get the directory path
 
 const app=express();
 const port =3000;
-const __dirname = dirname(fileURLToPath(import.meta.url))   //to get path 
+const __dirname = dirname(fileURLToPath(import.meta.url))   //to get the path upto the folder eg :acer:document/github/Foodism-com/ + 'filename' 
 
-app.use(express.static(__dirname +'/main/css'))  //to resolve static files
+app.use(express.static(__dirname +'/views'))  //to resolve static files
 
 
 
 app.get("/",(req,res) => {
-    res.sendFile(__dirname+ '/main/index.html',)})
+    res.sendFile(__dirname+ '/views/index.html',)})
     
  
 
 app.get("/about",(req,res) => {
-    res.sendFile(__dirname + '/main/about.html')})
+    res.sendFile(__dirname + '/views/about.html')})
     
 app.get("/contact",(req,res) => {
-    res.send( __dirname + "/main/contact.html")})
+    res.send( __dirname + "/views/contact.html")})
     
 
 app.get("/addrecipe",(req,res) => {
